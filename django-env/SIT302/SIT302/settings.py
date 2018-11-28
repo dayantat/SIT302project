@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'x($phd)njhm)6o5w%#s+1k%4epknuyyu39ywov8dtf!foz4ci7'
+SECRET_KEY = 'v&s2akqkt%84_u0py=-1ex_5e_-gi@4c_8(apo6$mqy&c_-k(-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,8 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'gameplay',
-    'accounts'#.apps.AccountsConfig'  # If required use this
+    'users'
 ]
 
 MIDDLEWARE = [
@@ -122,3 +121,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+
+# User AUTH
+
+AUTH_USER_MODEL = 'users.CustomUser'
