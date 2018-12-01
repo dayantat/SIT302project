@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<html>
+    <body ng-app="scrumboard.demo">
+        {% verbatim %} <!-- This allows us to display python code even though JS uses{{}} -->
+
+        <div ng-controller="ScrumboardController"> <!-- this div tag allows access to the Scrumboard controller -->
+            <div ng-repeat="list in data">
+                <h3>{{ list.name }}</h3>
+                <ul>
+                    <li ng-repeat="card in list.cards">{{ card.title }}</li>
+                </ul>
+                <input type="text" ng-model="new_title" /> <!-- the {{ new_title }} tag can mirror text written -->
+                <button ng-click="add(list, new_title)">Add item</button>
+            </div>
+        </div>
+        {% endverbatim %}
+
+        <!-- the below allows access to the AngularJS library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+        <!-- the below is the JS controller code -->
+        <script src="{% static 'scrumboard/scrumboard.js' %}"></script>
+    </body>
+</html>
