@@ -2,47 +2,32 @@
                 'use strict';
 
                 angular.module('scrumboard.demo', [])
-                    .controller('ScrumboardController', [ '$scope', ScrumboardController]);
+                    .controller('ScrumboardController', [ '$scope', '$http', ScrumboardController]);  // the services $scope and $http must be strings
 
-                function ScrumboardController($scope) {
-                $scope.add = function(list, title) {
-                    var card = {
-                        title: title
+                function ScrumboardController($scope, $http) {  // $http must be used as a variable
+                    $scope.add = function(list, title) {
+                        var card = {
+                            list: list.id,
+                            title: title
+                        };
+                        $http.post('/scrumboard/cards/', card).then(function(response){  // This is a completed post request
+                            list.cards.push(response.data);  // Adds a new card to the server
+                        },
+                        // 403 errors can occurs when a user is logged in, this will be solved later
+                        function(){  // If something fails the below will execute
+                            alert('Could not create card');  // Only the Alert will show
+                        });
+
+
                     };
 
-                    list.cards.push(card);
-                };
+                    $scope.data = [];
+                    // This is a instance call, and will be updated when it receives a response from the server
+                    $http.get('/scrumboard/lists/').then(function(response){  //  This is a get request the lists object
+                        $scope.data = response.data;
 
+                    });
 
-                    $scope.data = [{
-                        name: 'Django demo',
-                        cards: [
-                            {
-                                title: 'Create Models'
-                            },
-                            {
-                                title: 'Create View'
-                            },
-                            {
-                                title: 'Migrate Database'
-                            },
-                        ]
-                    },
-                    {
-                        name: 'Angular demo',
-                        cards: [
-                            {
-                                title: 'write html'
-                            },
-                            {
-                                title: 'Create html'
-                            },
-                            {
-                                title: 'writeJS'
-                            },
-                        ]
-                    }
-                    ];
 
                 }
 

@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include, re_path
 from django.conf.urls import url, include
+from django.views.generic import TemplateView
 
 urlpatterns = [
-    path('admins/', admin.site.urls),  # In prod this line should be changed
+    path('admin/', admin.site.urls),  # In prod this line should be changed
     #  With the below anything that matches scrumboard/ will be looked for in the scrumboards/urls.py file
-    re_path(r'^scrumboard/', include('scrumboard.urls'))  # include allows all extended urls to be imported from the file
+    re_path(r'^scrumboard/', include('scrumboard.urls')),  # include allows all extended urls to be imported from the file
+    re_path(r'^$', TemplateView.as_view(template_name="scrumboard/home.html"))
 ]
