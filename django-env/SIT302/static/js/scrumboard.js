@@ -1,7 +1,7 @@
 (function(){
                 'use strict';
 
-                angular.module('scrumboard.demo', [])
+                angular.module('scrumboard.demo', ['ngRoute'])
                     .controller('ScrumboardController', [ '$scope', '$http', ScrumboardController]);  // the services $scope and $http must be strings
 
                 function ScrumboardController($scope, $http) {  // $http must be used as a variable
@@ -19,6 +19,11 @@
                         });
 
 
+                    };
+
+                    $scope.login = function(){
+                        $http.post('/auth_api/login/',
+                        {username: 'dane', password: 'test'});  // this didn't work at the start but putting params: in for the user fixed it now it isn't needed
                     };
 
                     $scope.data = [];
