@@ -21,10 +21,7 @@
 
                     };
 
-                    $scope.login = function(){
-                        $http.post('/auth_api/login/',
-                        {username: 'dane', password: 'test'});  // this didn't work at the start but putting params: in for the user fixed it now it isn't needed
-                    };
+
 
                     $scope.data = [];
                     // This is a instance call, and will be updated when it receives a response from the server
