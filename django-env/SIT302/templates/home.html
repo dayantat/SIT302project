@@ -1,23 +1,16 @@
-{% load staticfiles %}
-<html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="{% static '/css/scrumboard.css' %}">
-    </head>
-    <body ng-app="scrumboard.demo">
+<!-- templates/home.html -->
+{% extends 'base.html' %}
 
-        <ng-view></ng-view>
+{% block title %}Home{% endblock %}
 
-        <!-- the below allows access to the AngularJS library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular-route.js"></script>
-
-
-
-        <!-- the below is the JS controller code -->
-        <script src="{% static 'js/scrumboard.js' %}"></script>
-        <script src="{% static 'js/scrumboard.config.js' %}"></script>
-        <script src="{% static 'js/card.directive.js' %}"></script>
-
-
-    </body>
-</html>
+{% block content %}
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+  <p><a href="{% url 'logout' %}">logout</a></p>
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a> |
+  <a href="{% url 'signup' %}">signup</a>
+{% endif %}
+  <a href="https://en.wikipedia.org/wiki/Django" class="external_link" id="link_to_wiki_page">Tesiting</a>
+{% endblock %}

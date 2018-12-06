@@ -13,17 +13,14 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+# djauth/urls.py
 from django.contrib import admin
-from django.urls import path, include, re_path
-from django.conf.urls import url, include
-from django.views.generic import TemplateView
-from django.views.decorators.csrf import ensure_csrf_cookie
+from django.urls import path, include
+from django.views.generic.base import TemplateView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),  # In prod this line should be changed
-    #  With the below anything that matches scrumboard/ will be looked for in the scrumboards/urls.py file
-    re_path(r'^scrumboard/', include('scrumboard.urls')),  # include allows all extended urls to be imported from the file
-    re_path(r'^auth_api/', include('auth_api.urls')),
-    re_path(r'^$', ensure_csrf_cookie(TemplateView.as_view(template_name="home.html")))
-
+    path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    path('admin/', admin.site.urls),
+    path('users/', include('users.urls')),
+    path('users/', include('django.contrib.auth.urls')),
 ]
