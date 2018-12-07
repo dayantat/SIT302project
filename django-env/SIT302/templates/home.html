@@ -6,6 +6,8 @@
 {% block content %}
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
+  Your email is {{ user.email }}  <!-- This is the correct email, and shows access to the database -->
+  and your password is {{ user.password }}  <!-- This is encrypted but shows access to the database -->
   <p><a href="{% url 'logout' %}">logout</a></p>
 {% else %}
   <p>You are not logged in</p>
