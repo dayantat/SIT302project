@@ -4,10 +4,19 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
+Enter Any code you guys want to add here
+
+
 <h2>Login</h2>
+<h3>Already our customer?</h3>
+<!-- Do Not Touch anything below here -->
 <form method="post">
   {% csrf_token %}
   {{ form.as_p }}
   <button type="submit">Login</button>
 </form>
+<!-- Do Not Touch anything above here -->
+
+Enter your code between this line
 {% endblock %}
+
