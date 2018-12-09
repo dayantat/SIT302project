@@ -10,6 +10,20 @@
   <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
 </head>
 <body>
+<header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+        {% if user.is_authenticated %}
+          <h1>Hi {{ user.username }}!</h1>
+          <p><a href="{% url 'logout' %}">logout</a></p>
+        {% else %}
+          <p>You are not logged in</p>
+          <a href="{% url 'login' %}">login</a> |
+          <a href="{% url 'signup' %}">signup</a>
+        {% endif %}
+
+    </div>
+</header>
+
     <header>
         <h1>
         This is the Header
