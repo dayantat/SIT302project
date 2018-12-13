@@ -1,0 +1,12 @@
+<!-- templates/game.html -->
+{% extends 'base.html' %}
+
+{% block title %}Game{% endblock %}
+
+{% block content %}
+    This is the game
+    {% for Question in object_list %}
+        <h1>{{ Question.question }}</h1>
+    {% endfor %}
+
+{% endblock %}

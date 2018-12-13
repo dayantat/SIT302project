@@ -7,9 +7,12 @@ from django.utils import timezone
 class Question(models.Model):
     question = models.CharField(max_length=200)
 
+    def __str__(self):
+        return "List: {}".format(self.question)
+
 
 class Choice(models.Model):
-    question = models.ForeignKey("Question", related_name="choices")
+    question = models.ForeignKey("Question", related_name="choices", on_delete=models.CASCADE)
     choice = models.CharField("Choice", max_length=50)
     position = models.IntegerField("position")
 
@@ -21,3 +24,6 @@ class Choice(models.Model):
             ("question", "position")
         ]
         ordering = ("position",)
+
+    def __str__(self):
+        return "Choice {}".format(self.choice)
