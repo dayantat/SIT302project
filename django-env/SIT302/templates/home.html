@@ -4,19 +4,22 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
+
+<div class="center jumbotron">
 {% if user.is_authenticated %}
-IF the user is logged in enter code here
   <h1>Hi {{ user.username }}!</h1>
-  Your email is {{ user.email }}  <!-- This is the correct email, and shows access to the database -->
-  and your password is {{ user.password }}  <!-- This is encrypted but shows access to the database -->
-  <p><a href="{% url 'logout' %}">logout</a></p>
+    <p>Would you like to play a game?</p>
+    <h1>INSERT GAME LINK HERE</h1>
+
+
 {% else %}
-Enter Code below this line for IF the user is not logged in
+
   <p>You are not logged in</p>
+  <p>Please login to Continue</p>
   <a href="{% url 'login' %}">login</a> |
   <a href="{% url 'signup' %}">signup</a>
 
-Enter Code above this line for if the user is not logged in
 {% endif %}
-  <a href="https://en.wikipedia.org/wiki/Django" class="external_link" id="link_to_wiki_page">Tesiting</a>
+
+</div>
 {% endblock %}
