@@ -1,29 +1,28 @@
-from django.conf import settings
+import datetime
 from django.db import models
 from django.utils import timezone
 
 # Create your models here.
 
+
+# Each model has a number of class variables, each of which represents a database field in the model.
+# Each field is represented by an instance of a Field class – e.g., CharField for character fields and DateTimeField for datetimes. This tells Django what type of data each field holds.
+
 class Question(models.Model):
-    question = models.CharField(max_length=200)
+    question_text = models.CharField(max_length=200)
+    # pub_date = models.DateTimeField("Date Published")
+    #
+    # def was_published_recently(self):
+    #     return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 
     def __str__(self):
-        return "List: {}".format(self.question)
+        return self.question_text
 
 
 class Choice(models.Model):
-    question = models.ForeignKey("Question", related_name="choices", on_delete=models.CASCADE)
-    choice = models.CharField("Choice", max_length=50)
-    position = models.IntegerField("position")
-
-    class Meta:
-        unique_together = [
-            # No Duplicated Choice per question
-            ("question", "choice"),
-            # No Duplicated position per question
-            ("question", "position")
-        ]
-        ordering = ("position",)
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    choice_text = models.CharField("Choice", max_length=200)
+    votes = models.IntegerField(default=0)
 
     def __str__(self):
-        return "Choice {}".format(self.choice)
+        return self.choice_text
