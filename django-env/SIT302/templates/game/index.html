@@ -1,0 +1,18 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% block title %}detail{% endblock %}
+
+{% block content %}
+
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="{% url 'game:detail' question.id %}">{{ question.question_text }}</a></li> <!-- This line looks up the game.urls and makes it easier -->
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+{% endblock %}
