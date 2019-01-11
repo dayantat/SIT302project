@@ -5,6 +5,7 @@ from django.views import generic
 from .models import Question, Choice
 from django.utils import timezone
 
+
 class IndexView(generic.ListView):
 
     template_name = 'game/index.html'
