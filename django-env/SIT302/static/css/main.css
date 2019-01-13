@@ -191,3 +191,261 @@ input {
     width: auto;
     margin-left: 0;
 }
+
+
+/* Aaron's CSS file START */
+
+.container{
+	background-color:black;
+	opacity:0.5;
+	width:100%;
+	margin:0px;
+}
+#before_login_p{
+	text-align: center;
+	height:40px;
+}
+#before_login_h{
+	font-size:28px;
+	color:#fff;
+}
+#before_login_p span{
+	display:inline-block;
+	width:70px;
+	height:40px;
+	text-align: center;
+	line-height: 40px;
+}
+#before_login_p a{
+font-size:25px;
+color:#fff;
+opacity:0.3;
+transition:all 1s ease;
+}
+#before_login_p a:hover{
+	color:#fff;
+	opacity:1;
+	text-decoration: none;
+}
+
+#after_login_div_left{
+	display:inline-block;
+	width:300px;
+	height:80px;
+}
+#user_avatar{
+	width:100px;
+	height:80px;
+	border-radius:50%;
+	border:2px solid blue;
+	display: inline-block;
+}
+#user_avatar img{
+	width:100%;
+	height:100%;
+}
+#user_name{
+	display:inline-block;
+	font-size:20px;
+	margin-left:20px;
+	color:#fff;
+	opacity:0.7;
+}
+#after_login_div_right{
+	display:inline-block;
+	float:right;
+	height:80px;
+	line-height: 80px;
+	color:#fff;
+	font-size:20px;
+}
+#user_score{
+	display:inline-block;
+	width:170px;
+	text-align: center;
+	opacity: 0.7;
+	transition: all 1s ease;
+}
+#user_information{
+	display: inline-block;
+	width:200px;
+	text-align: center;
+	opacity: 0.7;
+	transition: all 1s ease;
+}
+#user_logout{
+	display:inline-block;
+	width:120px;
+	text-align: center;
+}
+#user_logout a{
+	color:#fff;
+	text-decoration: none;
+	opacity: 0.7;
+	display:inline-block;
+	height:80px;
+	width:120px;
+	transition: all 1s ease;
+}
+#user_score:hover, #user_information:hover, #user_logout a:hover{
+	opacity: 1;
+	cursor:pointer;
+}
+
+
+
+
+#footer{
+	background-color:#e0e0e0;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom:50px;
+	padding-top:30px;
+}
+
+#footer_div{
+	width:70%;
+}
+
+#footer_left_ul, #footer_middle_ul{
+	list-style-type: none;
+	margin:0px;
+	padding:0px;
+}
+
+
+/*#footer_left_ul li{
+	display:inline-block;
+}*/
+#footer_left,#footer_right{
+	width:30%;
+	float:left;
+}
+
+#footer h2{
+	margin:0px 0px 10px 0px;
+	font-size:24px;
+	text-align: left;
+}
+#footer_left_ul a{
+	color:#919191;
+}
+
+#footer_middle{
+	float:left;
+	width:40%;
+}
+
+.footer_middle_icon{
+	display:inline-block;
+	width:27px;
+	height:27px;
+	background-color: rgb(59,62,68);
+	line-height: 27px;
+	text-align: center;
+	border-radius:3px;
+}
+.footer_middle_icon img{
+	margin-top:2px;
+}
+#footer_middle_ul li{
+	margin-bottom:10px;
+}
+.footer_right_icon{
+	display:inline-block;
+	margin-right:10px;
+	width:35px;
+	height:35px;
+	background-color:rgb(68,68,68);
+	text-align: center;
+	vertical-align: middle;
+	border-radius:50%;
+}
+.footer_right_icon img{
+	width:50%;
+	height:50%;
+	margin-top:7px;
+}
+
+/*this css style is used to control the style of the stay in touch part*/
+@keyframes shake{
+	from,to{
+		transform: translate3d(0,0,0);
+	}
+
+	10%,30%,50%,70%,90%{
+		transform:translate3d(-10px, 0 , 0);
+		-webkit-transform:translate3d(-10px, 0 , 0);/* chrome and safari*/
+		-moz-transform:translate3d(-10px, 0 , 0); /*firefox*/
+	}
+
+	20%,40%,60%,80%{
+		transform:translate3d(10px, 0, 0);
+		-webkit-transform:translate3d(10px, 0 , 0);
+		-moz-transform:translate3d(10px, 0 , 0);
+	}
+}
+@-webkit-keyframes shake{
+	from,to{
+		transform: translate3d(0,0,0);
+	}
+
+	10%,30%,50%,70%,90%{
+		transform:translate3d(-10px, 0 , 0);
+		-webkit-transform:translate3d(-10px, 0 , 0);/* chrome and safari*/
+		-moz-transform:translate3d(-10px, 0 , 0); /*firefox*/
+	}
+
+	20%,40%,60%,80%{
+		transform:translate3d(10px, 0, 0);
+		-webkit-transform:translate3d(10px, 0 , 0);
+		-moz-transform:translate3d(10px, 0 , 0);
+	}
+}
+@-moz-keyframes shake{
+	from,to{
+		transform: translate3d(0,0,0);
+	}
+
+	10%,30%,50%,70%,90%{
+		transform:translate3d(-10px, 0 , 0);
+		-webkit-transform:translate3d(-10px, 0 , 0);/* chrome and safari*/
+		-moz-transform:translate3d(-10px, 0 , 0); /*firefox*/
+	}
+
+	20%,40%,60%,80%{
+		transform:translate3d(10px, 0, 0);
+		-webkit-transform:translate3d(10px, 0 , 0);
+		-moz-transform:translate3d(10px, 0 , 0);
+	}
+}
+
+.match{
+	position:relative;
+	animation:shake 1s infinite;
+    -moz-animation:shake 1s infinite; /* Firefox */
+    -webkit-animation:shake 1s infinite; /* Safari and Chrome */
+}
+
+.background1{
+	background-color:rgb(52,72,152);
+}
+.background2{
+	background-color:rgb(75,193,250);
+}
+.background3{
+	background-color:rgb(191,43,101);
+}
+.background4{
+	background-color:rgb(161,28,33);
+}
+.background5{
+	background-color:rgb(60,110,54);
+}
+
+
+
+
+/* Aaron's CSS file END */
+

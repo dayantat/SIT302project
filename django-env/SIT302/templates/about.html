@@ -1,0 +1,21 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %} <!-- Anything inside blck content can be edited -->
+Put anycode in here
+{% if user.is_authenticated %}
+
+IF the user is logged in enter code here
+  <h1>Hi {{ user.username }}! This is the About us for Logged in</h1>
+  Your email is {{ user.email }}  <!-- This is the correct email, and shows access to the database -->
+  and your password is {{ user.password }}  <!-- This is encrypted but shows access to the database -->
+  <p><a href="{% url 'logout' %}">logout</a></p>
+{% else %}
+  <h1>Not logged in about us</h1>
+
+{% endif %}
+
+
+{% endblock %}
