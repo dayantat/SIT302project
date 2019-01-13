@@ -24,5 +24,6 @@ urlpatterns = [
     path('users/', include('users.urls')),
     path('game/', include('game.urls')),
     path('about/', TemplateView.as_view(template_name='about.html'), name='about'),
+    path('faq/', TemplateView.as_view(template_name='faq.html'), name='faq'),
     path('users/', include('django.contrib.auth.urls')),
 ]
