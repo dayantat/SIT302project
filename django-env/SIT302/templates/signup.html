@@ -6,12 +6,23 @@
 {% block content %}
 Enter your code below this line
 
-<h2>Sign up</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Sign up</button>
-</form>
+	<div class="head">
+		<p class="title">New Account</p>
+		<p class="title1">Not our registered customer yet?</p>
+			<!-- <h4> </br> Not our registered customer yet?</strong></h4> -->
+	</div>
+
+    <div class="login">
+      <div class="login-box">
+        <div class="login_form">
+          <form method="post">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button type="submit">Sign up</button>
+          </form>
+        </div>
+      </div>
+    </div>
 
 Enter your code above this line
 {% endblock %}

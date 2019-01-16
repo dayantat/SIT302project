@@ -449,3 +449,198 @@ transition:all 1s ease;
 
 /* Aaron's CSS file END */
 
+
+/* Teng's CSS file Start */
+
+
+html,body {
+    height: 100%;
+	width: 100%;
+	background: url(../pic/main_background.png);
+	background-size: 100% 100%;
+	margin: 0;
+	/* overflow: auto; */
+}
+
+.head1{
+        width: 272px;
+        margin: 0 auto;
+         margin-top: 55px;
+
+}
+.head{
+        width: 272px;
+        margin: 0 auto;
+         margin-top: -80px;
+
+}
+.btn{
+  width: 50%
+}
+.btn_count{
+    width: 100px;
+    margin: auto;
+}
+.btn_count button{
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    background: transparent;
+    border: 1px solid #C9C2CB;
+    margin-top: 40px;
+}
+.title{
+    font-size: 31px;
+    margin: 0;
+}
+.title1{
+    font-size: 16px;
+    font-weight: 1000;
+}
+.web_login {
+
+    position:relative;
+
+}
+
+.web_login .login_form {
+    width:272px;
+    margin:0 auto;
+    margin-top: 12px;
+}
+
+.web_login .input-tips {
+    float:left;
+    margin-top:10px;
+    width:50px;
+    height:42px;
+    font-size:16px;
+    line-height:42px;
+}
+.web_login .inputOuter {
+    width:200px;
+    height:42px;
+    margin-top:10px;
+    float:left;
+
+}
+.web_login .inputOuter1
+{
+    font-size: 30px;
+    width:200px;
+    height:30px;
+    /* margin-top:10px; */
+    /*float:left;*/
+}
+.web_login .inputstyle {
+    width:200px;
+    height:25px;
+    padding-left:5px;
+    line-height:30px;line-height:38px;
+    border:1px solid #D7D7D7;
+
+    color:#333;border-radius:2px;
+    font-family:Verdana, Tahoma, Arial;
+    font-size:16px;
+    ime-mode:disabled;
+}
+
+.web_login .uinArea {
+    height:55px;
+    position:relative;
+    z-index:10;
+}
+.uinArea1 {
+    height:40px;
+    position:relative;
+    z-index:10;
+}
+.web_login .pwdArea {
+    height:55px;
+    margin-bottom:10px;
+    position:relative;
+    z-index:3;
+}
+/* .login {
+    background-color:black;/* IE6和部分IE7内核的浏览器(如QQ浏览器)下颜色被覆盖 */
+    /* background-color:rgba(255,255,255,0.2); /* IE6和部分IE7内核的浏览器(如QQ浏览器)会读懂，但解析为透明 */
+    /* border-radius: 20px;
+    padding:5px 0;
+    width:370px;
+
+    border-bottom:none;
+    position:relative;
+    margin: 0 auto;
+    -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, .3);
+    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, .3);
+} */
+
+.web_login{padding-bottom:20px;}
+
+.web_login .reg_form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.web_login .input-tips2 {
+    padding-right: 5px;
+    width: 80px;_width: 75px;_font-size:12px;}
+.button_blue
+{
+    display:inline-block;
+    color: #3D3D3D;
+    /* margin-left: 56px; */
+    height:41px;
+    /* border-radius:4px; */
+    background:#AAAAAA;
+    border:none;
+    cursor:pointer;
+    border-radius: 5px;
+    /* border-bottom:3px solid #0078b3;*border-bottom:none; */
+    /* color:#fff; */
+    font-size:16px;
+    width: 100px;
+    text-align:center;outline:none;
+    font-family: "Microsoft Yahei",Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+.she3 {
+	position:fixed;
+	background-color: rgba(131, 182, 227, 0.8);
+	top:50%;
+	left:50%;
+	width:30%;
+	height:55%;
+	margin:-10% 0 0 -15%;
+	border-radius:5px;
+	background-color : #fff;
+	display:none ;
+	z-index: 999;
+}
+.zhi3 {
+	padding:12px;
+	position: relative;
+}
+.home{
+    width: 100%;
+}
+.home_title{
+    position: absolute;width:400px;height:200px;left:45%;top:50%;
+     margin: auto
+}
+.Login{
+    text-decoration:none;
+    font-size: 40px;
+
+}
+.Register{
+    text-decoration:none;
+    font-size: 40px;
+
+}
+.span_x{
+    font-size: 40px;
+}
+
+/* Teng's CSS file END */
+
