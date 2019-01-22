@@ -301,7 +301,8 @@ transition:all 1s ease;
 	justify-content: center;
 	align-items: center;
 	padding-bottom:50px;
-	padding-top:30px;
+    padding-top:30px;
+    margin-top: 10px;
 }
 
 #footer_div{
@@ -451,7 +452,9 @@ transition:all 1s ease;
 
 
 /* Teng's CSS file Start */
-
+.header_title{
+    margin-top: -60px;
+}
 
 html,body {
     height: 100%;
@@ -469,9 +472,10 @@ html,body {
 
 }
 .head{
-        width: 272px;
+        width: 300px;
         margin: 0 auto;
-         margin-top: -80px;
+         /* margin-top: -80px; */
+         color: white;
 
 }
 .btn{
@@ -641,6 +645,127 @@ html,body {
 .span_x{
     font-size: 40px;
 }
+.main{
+    text-align: center;
+}
+.home_main{
+    height: 86%;
+}
+.login1{
+    font-size: 50px;
+    color: white;
+    display: inline-block;
+}
+.home_cent{
+position: absolute;
+top: 50%;
+left: 40%;
+}
+.login{
+    font-size: 30px;
+    color: white;
+    display: inline-block;
+    /* margin-top: 50px; */
+}
+.home_one{
+    position: absolute;
+    top: 38%;
+    left: 38%;
+}
+.login:hover{
+    text-decoration:none !important;
+}
+.signup{
+    font-size: 50px;
+    color: white;
+}
+.signup:hover{
+    text-decoration:none !important;
+}
 
+.span_line{
+    font-size: 50px;
+    color: white;
+}
+.span_login_title{
+    color: white;
+}
+.span_login_login{
+    color: white;
+}
+.span_login_login1{
+    color: white;
+}
+#id_username{
+    width: 50%;
+}
+#id_password{
+    width: 50%;
+}
+.login_form #id_username{
+    width: 20%;
+    color: black;
+}
+.login_form p:nth-child(2){
+    margin-left: 25px;
+}
+.login_form p:nth-child(4){
+    margin-left: 33px;
+}
+.login_form p:nth-child(7){
+    margin-left: -65px;
+}
+label{
+    color: white;
+}
+#id_email{
+    width: 20%;
+    color: black;
+}
+#id_password1{
+    width: 20%;
+    color: black;
+}
+#id_password2{
+    width: 20%;
+    color: black;
+}
+.helptext{
+    display: none
+}
+.login_form form ul li{
+    font-size: 20px;
+    list-style-type: none;
+    text-align: left;
+}
+.button{
+        display: inline-block;
+        border-radius: 5px;
+        background-color: #ce9a2b;
+        text-align: center;
+        font-weight: bold;
+        padding: 10px 40px;
+        color: #fff;
+        outline: none;
+        text-decoration: none;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 0px 3px #7a5b19, 0px 4px #6d5117, 0px 5px #604814, 0px 6px #543f11, 0px 7px #47350f, 0px 8px #36280b, 0px 12px 6px -1px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.7), inset 0 0 3px rgba(252, 252, 252, 0.6);
+        -webkit-box-shadow: 0px 3px #7a5b19, 0px 4px #6d5117, 0px 5px #604814, 0px 6px #543f11, 0px 7px #47350f, 0px 8px #36280b, 0px 12px 6px -1px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.7), inset 0 0 3px rgba(252, 252, 252, 0.6);
+        box-shadow: 0px 3px #7a5b19, 0px 4px #6d5117, 0px 5px #604814, 0px 6px #543f11, 0px 7px #47350f, 0px 8px #36280b, 0px 12px 6px -1px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.7), inset 0 0 3px rgba(252, 252, 252, 0.6);
+        border: solid 1px #7a5b19;
+        background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.14), rgba(255, 255, 255, 0.14));
+        background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.14), rgba(255, 255, 255, 0.14));
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.14), rgba(255, 255, 255, 0.14));
+        -moz-transition: -moz-transform 100ms, box-shadow 100ms, background-color 200ms, color 200ms;
+        -o-transition: -o-transform 100ms, box-shadow 100ms, background-color 200ms, color 200ms;
+        -webkit-transition: -webkit-transform 100ms, box-shadow 100ms, background-color 200ms, color 200ms;
+        transition: transform 100ms, box-shadow 100ms, background-color 200ms, color 200ms;
+}
+.button:active {
+    -moz-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+}
 /* Teng's CSS file END */
 
