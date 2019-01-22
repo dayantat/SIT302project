@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Question, Choice
+from .models import Question, Choice, Category
 
 # Register your models here.
 
@@ -16,10 +16,12 @@ class QuestionAdmin(admin.ModelAdmin):
         ("Category", {'fields': ['category_text']}),
     ]
     inlines = [ChoiceInline]
-    list_display = ('question_text', 'pub_date', 'was_published_recently')
+    list_display = ('question_text', 'pub_date', 'was_published_recently', 'category_text')
     list_filter = ['pub_date']
     search_fields = ['question_text']
 
+# class CategoryAdmin(admin.ModelAdmin):
+#
 
 admin.site.register(Question, QuestionAdmin)
 

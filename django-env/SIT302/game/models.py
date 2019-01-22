@@ -9,11 +9,26 @@ from django.utils import timezone
 # Each field is represented by an instance of a Field class – e.g., CharField for character fields and DateTimeField for datetimes. This tells Django what type of data each field holds.
 
 
+class Category(models.Model):
+    EMAIL = "EMAIL"
+    review_field = (
+        (EMAIL, "Email"),
+        ("SPAM", "Spam"),
+        ("PHYSICAL", "Physical")
+    )
+    category_text = models.CharField(max_length=40, choices=review_field, default=EMAIL)
+
+
+
+    def __str__(self):
+        return self.category_text
+
 
 
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField("Date Published")
+    # category_text = models.ForeignKey(Category, on_delete=models.CASCADE)
     EMAIL = "EMAIL"
     review_field = (
         (EMAIL, "Email"),
@@ -34,20 +49,7 @@ class Question(models.Model):
         return self.question_text
 
 
-#
-# class Category(models.Model):
-#     EMAIL = "EMAIL"
-#     review_field = (
-#         (EMAIL, "Email"),
-#         ("SPAM", "Spam"),
-#         ("PHYSICAL", "Physical")
-#     )
-#     category_text = models.CharField(max_length=40, choices=review_field, default=EMAIL)
-#
-#     question_text = models.ForeignKey(Question, on_delete=models.CASCADE)
-#
-#     def __str__(self):
-#         return self.category_text
+
 
 
 class Choice(models.Model):
