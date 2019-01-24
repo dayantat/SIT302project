@@ -6,7 +6,7 @@
 {% block content %}
     This is the game
     {% for Question in object_list %}
-        <h1>{{ Question.category_text }}</h1>
+        <h1>{{ Question.question_text }} {{ Question.category_text }}</h1>
     {% endfor %}
 
 {% endblock %}

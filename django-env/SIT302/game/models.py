@@ -57,6 +57,7 @@ class Choice(models.Model):
     choice_text = models.CharField("Choice", max_length=200)
     votes = models.IntegerField(default=0)
     correct_answer = models.BooleanField(default=False)
+    points = models.IntegerField(default=0)
 
     def __str__(self):
         return self.choice_text

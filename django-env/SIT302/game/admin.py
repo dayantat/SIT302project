@@ -16,7 +16,7 @@ class QuestionAdmin(admin.ModelAdmin):
         ("Category", {'fields': ['category_text']}),
     ]
     inlines = [ChoiceInline]
-    list_display = ('question_text', 'pub_date', 'was_published_recently', 'category_text')
+    list_display = ('question_text', 'category_text')
     list_filter = ['pub_date']
     search_fields = ['question_text']
 
