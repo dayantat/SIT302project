@@ -7,7 +7,7 @@
 
 {% if latest_question_list %}
     <ul>
-        <li>Questions</li>
+        <h1>Questions</h1>
     {% for question in latest_question_list %}
         <li><a href="{% url 'game:detail' question.id %}">{{ question.question_text }}</a>, from the {{ question.category_text }} category</li> <!-- This line looks up the game.urls and makes it easier -->
     {% endfor %}
