@@ -35,3 +35,14 @@ $(".footer_right_icon").mouseleave(function() {
 
 });
 }
+
+
+
+
+$(".about_us_block_background").hover(function(){
+    $(this).css("opacity",0);
+});
+
+$(".about_us_block_info").hover(function(){
+    $(this).css("color", "rgb(1,44,2000)");
+});

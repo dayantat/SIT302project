@@ -5,7 +5,7 @@ h1 a, h2 a {
 /*universal */
 
 body {
-    padding-top: 60px;
+    padding-top: 0px;
 }
 
 section {
@@ -444,6 +444,256 @@ transition:all 1s ease;
 .background5{
 	background-color:rgb(60,110,54);
 }
+
+
+
+/*Aaron's about us css file below*/
+#video_display{
+    width:90%;
+    height:400px;
+    position:relative;
+    margin-right: auto;
+    margin-left:auto;
+   /* border-radius: 10px;*/
+
+}
+#video_display h3{
+    position:absolute;
+    left:20%;
+    top:40%;
+    font-size:50px;
+    color:white;
+    /*margin-left: auto;
+    margin-right: auto;*/
+    font-family: "helvetica neue", tahoma, "PingFang SC", "microsoft yahei", arial, "hiragino sans gb", sans-serif;
+}
+
+#about_us_information{
+    /*display:flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;*/
+    text-align: center;
+    margin-top:50px;
+
+
+}
+#about_us_information h1{
+    color:rgb(1,44,2000);
+    /*text-transform: uppercase;*/
+    width:70%;
+    display: block;
+    font-family:"Times New Roman",Georgia,Serif;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:0px;
+    margin-top:0px;
+}
+#about_us_details{
+    width:70%;
+    font-size:20px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:40px;
+}
+
+#about_us_block{
+    width:1120px;
+    margin-left:auto;
+    margin-right: auto;
+    overflow: hidden;
+    margin-top:80px;
+}
+#about_us_block>div{
+    width:320px;
+    height:500px;
+    float:left;
+    margin-right:30px;
+    margin-left:20px;
+}
+
+#about_us_block1{
+    /*float:left;*/
+    position:relative;
+}
+#about_us_block2{
+    /*float:left;*/
+    position:relative;
+}
+#about_us_block3{
+    /*float:right;*/
+    position:relative;
+}
+#about_us_block1_info{
+    position: absolute;
+    top:200px;
+    left:50px;
+    color:white;
+    font-size:20px;
+    font-family:"Times New Roman",Georgia,Serif;
+    
+}
+#about_us_block2_info{
+    position: absolute;
+    top:200px;
+    left:35px;
+    color:white;
+    font-size:24px;
+    font-family:"Times New Roman",Georgia,Serif;
+}
+#about_us_block3_info{
+    position: absolute;
+    top:200px;
+    left:120px;
+    color:white;
+    font-size:20px;
+    font-family:"Times New Roman",Georgia,Serif;
+    
+}
+#about_us_block1_background{
+    background-image:linear-gradient(black 0%, white 50%, black 100%);
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    z-index:1;
+    opacity:0.2;
+    transition: all 1s ease;
+}
+#about_us_block2_background{
+    background-image:linear-gradient(black 0%, white 50%, black 100%);
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    z-index:1;
+    opacity:0.2;
+    transition: all 1s ease;
+}
+#about_us_block3_background{
+    background-image:linear-gradient(black 0%, white 50%, black 100%);
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    z-index:1;
+    opacity:0.2;
+    transition: all 1s ease;
+}
+.about_us_img{
+    width:100%;
+    height:100%;
+    /*opacity:0.7;*/
+}
+/* Aaron's about us.html CSS file END */
+
+
+
+/* Aaron's faq.html CSS file Start */
+/*#faq_content{
+    overflow: hidden;
+    width:90%;
+    margin-left:auto;
+    margin-right: auto;
+}
+#faq_left_content{
+    width:60%;
+    float:left;
+}
+#faq_right_content{
+    width:40%;
+    float:left;
+
+}
+#faq_right_content img{
+    width:100%;
+}
+#faq_left_content h2{
+    text-align: left;
+    font-size:32px;
+    margin-bottom:20px;
+}
+.faq_left_contents{
+    width:90%;
+    background-color:blue;
+    border-radius: 14px;
+    border:1px solid gray;
+    margin-bottom:30px;
+    padding:0 20px;
+}
+.faq_left_contents p{
+    text-indent: 2em;
+}*/
+#faq_left_content{
+    width:60%;
+    margin-right: auto;
+    margin-left:auto;
+    margin-top:60px;
+}
+#faq_left_content h2{
+    text-align: left;
+    font-size:32px;
+    margin-bottom:30px;
+}
+.faq_left_contents{
+    width:100%;
+    background-color:orange;
+    border-radius: 14px;
+    border:1px solid gray;
+    margin-bottom:30px;
+    margin-left:auto;
+    margin-right: auto;
+    padding:0 20px 20px 20px;
+}
+.faq_left_contents p{
+    text-indent: 2em;
+}
+
+#faq_right_content{
+    width:90%;
+    margin-right: auto;
+    margin-left:auto;
+    margin-top:100px;
+    padding:0px 130px;
+    position: relative;
+    /*border-radius: 10px;*/
+}
+#faq_right_content img{
+    width:100%;
+    height:50%;
+    border-radius: 10px;
+}
+#faq_right_img{
+    position:absolute;
+    right:-10px;
+    top:-60px;
+    width:350px;
+    height:400px;
+}
+#faq_left_img1{
+    position:absolute;
+    left:70px;
+    top:300px;
+    width:150px;
+}
+#faq_left_img1 img{
+    width:100%;
+}
+#faq_left_img2{
+    position:absolute;
+    right:50px;
+    top:320px;
+    width:200px;
+}
+#faq_left_img2 img{
+    width:100%;
+}
+/* Aaron's faq.html CSS file END */
+
+
 
 
 

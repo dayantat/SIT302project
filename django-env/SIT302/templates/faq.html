@@ -1,21 +1,51 @@
 <!-- templates/home.html -->
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}FAQ{% endblock %}
 
 {% block content %} <!-- Anything inside blck content can be edited -->
-Put anycode in here
-{% if user.is_authenticated %}
+<!-- Put anycode in here -->
+<div id="faq_content">
+  <div id="faq_left_content">
+  	<h2>Frequently Asked Questions</h2>
+  	<div class="faq_left_contents">
+  		<h3>ABC?</h3>
+  		<p>Yes.If you do not live in Australia, please be aware of any import duties and taxes that may be charged on delivery into your country. Although this does not always occur, assessment of duties and taxes will be based on the value of the order and the Tax-free threshold (if it exists) for goods imported. These charges depend on your country’s import legislation and will not be covered by us.</p>
+  	</div>
+  	<div class="faq_left_contents">
+  		<h3>ABC?</h3>
+  		<p>Yes.If you do not live in Australia, please be aware of any import duties and taxes that may be charged on delivery into your country. Although this does not always occur, assessment of duties and taxes will be based on the value of the order and the Tax-free threshold (if it exists) for goods imported. These charges depend on your country’s import legislation and will not be covered by us.</p>
+  	</div>
+  	<div class="faq_left_contents">
+  		<h3>ABC?</h3>
+  		<p>Yes.If you do not live in Australia, please be aware of any import duties and taxes that may be charged on delivery into your country. Although this does not always occur, assessment of duties and taxes will be based on the value of the order and the Tax-free threshold (if it exists) for goods imported. These charges depend on your country’s import legislation and will not be covered by us.</p>
+  	</div>
+  	<div id="faq_left_img1"><img src="{% static 'pic/faq2.png' %}"></div>
+  	<div id="faq_left_img2"><img src="{% static 'pic/faq3.gif' %}"></div>
+  </div>
+
+  <div id="faq_right_content">
+  	<img src="{% static 'pic/faq.jpg' %}">
+  	<div id="faq_right_img"><img src="{% static 'pic/faq1.png' %}"></div>
+  </div>
+</div>
+
+
+
+
+
+<!-- {% if user.is_authenticated %}
 
 IF the user is logged in enter code here
   <h1>Hi {{ user.username }}! This is the FAQ for Logged in</h1>
-  Your email is {{ user.email }}  <!-- This is the correct email, and shows access to the database -->
-  and your password is {{ user.password }}  <!-- This is encrypted but shows access to the database -->
+  Your email is {{ user.email }}  This is the correct email, and shows access to the database
+  and your password is {{ user.password }}   This is encrypted but shows access to the database
   <p><a href="{% url 'logout' %}">logout</a></p>
 {% else %}
   <h1>Not logged in FAQ</h1>
 
-{% endif %}
+{% endif %} -->
 
 
 {% endblock %}

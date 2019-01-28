@@ -10,8 +10,8 @@ Put anycode in here
 IF the user is logged in enter code here
   <h1>Hi {{ user.username }}!</h1>
   Your email is {{ user.email }}  <!-- This is the correct email, and shows access to the database -->
-  and your password is {{ user.password }}  <!-- This is encrypted but shows access to the database -->
-  <p><a href="{% url 'logout' %}">logout</a></p>
+  and your Score is {{ user.profile.score }}  <!-- This is encrypted but shows access to the database -->
+  <p><a href="{% url 'game:index' %}">Game</a></p>
 {% else %}
 Enter Code below this line for IF the user is not logged in
   <p>You are not logged in</p>
