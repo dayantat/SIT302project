@@ -9,7 +9,7 @@
     <ul>
     {% for choice in question.choice_set.all %}
         {% if choice.correct_answer == True %}
-        <li><strong>{{ choice.choice_text }} is Correct, {{ choice.votes }} users have answered Correctly</strong></li>
+        <li><strong>{{ choice.choice_text }} is Correct.  {{ choice.points }} Points have been added to your score.  {{ choice.votes }} users have answered Correctly</strong></li>
         {% else %}
         <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }} </li>
         {% endif %}

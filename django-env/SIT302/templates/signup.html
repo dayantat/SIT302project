@@ -4,7 +4,7 @@
 {% block title %}Sign Up{% endblock %}
 
 {% block content %}
-Enter your code below this line
+
 
 	<div class="head">
 		<p class="title">New Account</p>
@@ -16,13 +16,13 @@ Enter your code below this line
       <div class="login-box">
         <div class="login_form">
           <form method="post">
-              {% csrf_token %}
-              {{ form.as_p }}
+                {% csrf_token %}
+                {{ form.as_p }}
               <button type="submit" class="button" style="font-size: 10px;">Sign up</button>
           </form>
         </div>
       </div>
     </div>
 
-Enter your code above this line
+
 {% endblock %}
