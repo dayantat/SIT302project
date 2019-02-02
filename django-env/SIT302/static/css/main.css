@@ -211,6 +211,8 @@ input {
 
 /* Aaron's CSS file START */
 
+/* Aaron's CSS file START */
+
 .container{
 	background-color:black;
 	opacity:0.5;
@@ -710,6 +712,145 @@ transition:all 1s ease;
 /* Aaron's faq.html CSS file END */
 
 
+/* Aaron's game detail.html CSS file START */
+#detail_submit_input{
+    width:160px;
+    height: 40px !important;
+    display: block;
+    margin-right: auto;
+    margin-left:auto;
+    border:1px solid gray;
+    border-radius: 5px;
+    margin-top:30px;
+    background-color: rgb(244,244,244);
+    -webkit-appearance: button;
+    font-size: 20px;
+    transition: all 0.5s ease;
+    margin-bottom: 70px;
+    /*display: block;*/
+}
+#detail_submit_input:hover{
+    background-color: #c1c0c0;
+    color:#9b41e0;
+}
+#detail_question_text{
+    height:200px;
+    width:800px;
+   /* border:1px solid #e9f1f9;
+    border-radius:10px;
+    background-color:#e9f1f9;*/
+}
+#detail_question_text h3{
+    text-align: left;
+}
+#detail_answer_text{
+    text-align: left;
+    padding-bottom:20px;
+}
+#detail_question_text p{
+    text-indent: 2em;
+}
+#detail_total_div{
+    margin-left:auto;
+    margin-right:auto;
+    width:800px;
+    width:800px;
+    border:1px solid #e9f1f9;
+    border-radius:10px;
+    background-color:#e9f1f9;
+    margin-top:90px;
+    margin-bottom:90px;
+    padding:10px;
+
+}
+#detail_h2_choose{
+    color:#012cff;
+    font-size: 36px;
+    margin-top:40px;
+    margin-bottom:40px;
+}
+#detail_hr{
+    /*ackground-color: orange;
+    height:2px;*/
+    margin-bottom:30px;
+    border: 1px dashed orange;
+}
+#detail_answer_div{
+    padding-left:20px;
+}
+.detail_answers{
+    width:100px;
+    /*padding-bottom:30px;*/
+}
+.detail_labels_of_answers{
+    margin-left:-75px;
+    width:95%;
+    cursor:pointer;
+    /*padding-bottom: 10px;*/
+}
+.detail_form_div{
+    margin-bottom: 20px;
+    border-radius: 3px;
+    height:30px;
+    line-height: 30px;
+    cursor:pointer;
+   /* transition: all 0.3 ease;*/
+}
+.detail_form_div:hover{
+    background-color:orange;
+}
+/* Aaron's game detail.html CSS file END*/
+
+/* Aaron's game results.html CSS file START*/
+#results_total_div{
+    width:1000px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:50px;
+    margin-bottom: 50px;
+    border:1px solid #858ce4;
+    border-radius: 10px;
+    /*padding-bottom:50px;*/
+    margin-bottom: 100px;
+    background-color: #dabdbd;
+    padding:0px 100px 50px 100px;
+}
+#results_ul{
+    /*list-style-type: none;*/
+    padding-left:20px;
+}
+#results_ul li{
+    font-size:16px;
+    margin-bottom:17px;
+    margin-top:10px;
+}
+#results_p2{
+    margin-top:30px;
+}
+#results_ul_div{
+    border:1px solid #00dcff;
+    border-radius: 10px;
+    background-color: #988df1;
+    margin-left:30px;
+    margin-right:30px;
+}
+#results_return_div{
+    margin-top:50px;
+}
+#results_total_div h1{
+    margin-top:60px;
+}
+#results_return_div a{
+    color:#4015ea;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    margin-left:27px;
+}
+#results_return_div a:hover{
+    color:red;
+}
+/* Aaron's game results.html CSS file END*/
 
 
 

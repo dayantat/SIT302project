@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Results{% endblock %}
 
 {% block content %}
 
+  <div id="results_total_div">
     <h1>{{ question.question_text }}</h1>
 
-    <ul>
+    <p id="results_p1">1、The answer you have choosen is ??</p>
+    <p id="results_p2">2、We will discuss the answers below</p>
+
+    <div id="results_ul_div">
+    <ul id="results_ul">
     {% for choice in question.choice_set.all %}
         {% if choice.correct_answer == True %}
         <li><strong>{{ choice.choice_text }} is Correct.  {{ choice.points }} Points have been added to your score.  {{ choice.votes }} users have answered Correctly</strong></li>
@@ -15,7 +21,12 @@
         {% endif %}
     {% endfor %}
     </ul>
+    </div>
 
-    <a href="{% url 'game:detail' question.id %}">Try again?</a>
+    <div id="results_return_div">
+      <p>3、Do you want to try again?</p>
+      <a href="{% url 'game:detail' question.id %}">Try again now</a>
+    </div>
+  </div>
 
 {% endblock %}
